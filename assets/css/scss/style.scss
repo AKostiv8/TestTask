@@ -1,0 +1,833 @@
+//colors
+$color_fuscous_gray_approx: #555;
+$white: #fff;
+$color_red_orange_approx: #ff2d2d;
+$color_mako_approx: #414a4f;
+$color_mine_shaft_approx: #313030;
+$color_coral_red_approx: #ff3f40;
+$color_concrete_approx: #f5f1f1;
+$color_ash_approx: #c4c0b1;
+$color_stack_approx: rgba(143,143,143,1);
+$black: #000000;
+$color_dove_gray_approx: #6f6d6d;
+$color_chicago_approx: #585858;
+$color_cararra_approx: #ececec;
+$red: #ff0000;
+$color_tapa_approx: #737373;
+$color_quarter_spanish_white_approx: #f5f0dd;
+$color_heavy_metal_approx: #2d2d2d;
+$mercury: #e5e5e5;
+$gray: #808080;
+$white_60: rgba(255,255,255,0.6);
+
+//fonts
+$font_0: sans-serif;
+$font_1: Open Sans;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font: normal 16px $font_0;
+	color: $color_fuscous_gray_approx;
+}
+ul {
+	list-style: none;
+	&.grid {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+nav {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+	opacity: 0.9;
+	&:hover {
+		opacity: 1;
+	}
+	&.btn {
+		color: $white;
+		border-radius: 4px;
+		background-color: $color_red_orange_approx;
+		font-weight: 800;
+		text-align: center;
+	}
+}
+#title {
+	text-align: left;
+}
+hr {
+	width: 150px;
+	height: 2px;
+	background-color: $color_red_orange_approx;
+	border: 0;
+	margin-bottom: 80px;
+}
+section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 125px 100px;
+	p {
+		max-width: 800px;
+		text-align: center;
+		margin-bottom: 35px;
+		padding: 0 20px;
+		line-height: 2;
+	}
+	&.offers {
+		padding-bottom: 0;
+	}
+	h3.title {
+		color: $color_mako_approx;
+		text-transform: capitalize;
+		font: bold 32px $font_1, $font_0;
+		margin-bottom: 35px;
+		text-align: center;
+	}
+}
+@media(max-width: 1000px) {
+	section {
+		padding: 100px 50px;
+	}
+	header {
+		padding: 0;
+	}
+	.our-work {
+		p {
+			padding: 0;
+		}
+		.grid li.eightsquare {
+			flex-basis: 100%;
+		}
+	}
+	.features {
+		align-items: center;
+		p {
+			text-align: center;
+			padding-right: 0;
+		}
+		.grid li {
+			flex-basis: 70%;
+			margin-bottom: 65px;
+			&.large {
+				flex-basis: 100%;
+				p {
+					margin-left: 0;
+					margin-right: 0;
+					padding: 0;
+				}
+				h4 {
+					margin-left: 0;
+				}
+				.grid li {
+					&.smallcubs {
+						flex-basis: 100%;
+						margin-bottom: 20px;
+						padding: 0;
+					}
+					&.socialnet {
+						margin-bottom: 20px;
+					}
+				}
+			}
+			&.small {
+				flex-basis: 100%;
+				padding-right: 0;
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.touch {
+		align-items: center;
+		p {
+			text-align: center;
+			padding-right: 0;
+		}
+	}
+	footer {
+		.grid {
+			.leftside {
+				flex-basis: 100%;
+				justify-content: center;
+				p {
+					margin-bottom: 35px;
+				}
+			}
+			.rightside {
+				flex-basis: 100%;
+				justify-content: center;
+			}
+		}
+		ul.grid {
+			flex-wrap: wrap;
+		}
+	}
+	.information .grid li.large {
+		padding-left: 15px;
+		padding-top: 25px;
+		padding-right: 10px;
+		justify-content: center;
+		flex-basis: 100%;
+		p {
+			padding-right: 10px;
+			text-align: center;
+		}
+	}
+}
+@media(max-width: 600px) {
+	section {
+		padding: 80px 30px;
+	}
+	.features {
+		margin-bottom: 70px;
+		.grid li {
+			flex-basis: 100%;
+			&.large h4 {
+				text-align: center;
+			}
+		}
+	}
+}
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: $white;
+	padding: 35px 100px 0;
+	nav {
+		display: flex;
+		justify-content: center;
+		font-size: 10pt;
+		li {
+			margin: 0;
+			padding-top: 28px;
+			padding-bottom: 28px;
+			padding-right: 12px;
+			padding-left: 12px;
+			text-transform: uppercase;
+			&:hover {
+				background-color: $color_coral_red_approx;
+				cursor: pointer;
+			}
+			&:first-child {
+				margin-left: 0;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+}
+.colorMenu {
+	background: $color_mine_shaft_approx;
+	width: 100%;
+	border-radius: 1px;
+}
+.active {
+	background-color: $color_coral_red_approx;
+}
+@media(max-width: 700px) {
+	header {
+		flex-direction: column;
+		h2 {
+			margin-bottom: 15px;
+		}
+	}
+	footer {
+		padding: 40px 15px;
+	}
+}
+.hero {
+	position: relative;
+	justify-content: center;
+	min-height: 100vh;
+	color: $white;
+	text-align: left;
+	.background-image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		background-color: $color_concrete_approx;
+		z-index: -1;
+	}
+	video {
+		width: 100%;
+		padding-left: 60px;
+		height: 340px;
+		background-color: $color_ash_approx;
+		box-shadow: 0 0 96px -5px $color_stack_approx;
+		border-radius: 2px;
+		z-index: -1;
+		object-fit: scale-down;
+		object-position: 45%;
+	}
+	h1 {
+		font: bold 38pt $font_1, $font_0;
+		margin-bottom: 15px;
+		color: $black;
+		text-transform: uppercase;
+	}
+	p {
+		font: normal 12.35pt $font_1, $font_0;
+		margin-bottom: 60px;
+		padding-right: 65px;
+		color: $color_dove_gray_approx;
+		text-align: left;
+		padding-left: 0;
+	}
+	.grid li {
+		&.large {
+			flex-basis: 50%;
+		}
+		&.small {
+			flex-basis: 50%;
+		}
+	}
+	a.btn {
+		padding: 13px 46px;
+		margin-bottom: 30px;
+	}
+}
+@media(max-width: 843px) {
+	.hero video {
+		margin-top: 80px;
+		object-position: center;
+	}
+	.offers video {
+		margin-top: 80px;
+		object-position: center;
+	}
+}
+@media(max-width: 800px) {
+	.hero {
+		min-height: 600px;
+		text-align: center;
+		h1 {
+			font-size: 120%;
+			text-align: center;
+			margin-top: 20px;
+		}
+		video {
+			padding: 0;
+			height: auto;
+		}
+		p {
+			font-size: 100%;
+			text-align: center;
+			padding: 0;
+		}
+		a.btn {
+			padding: 15px 40px;
+		}
+		.grid li {
+			&.small {
+				flex-basis: 100%;
+			}
+			&.large {
+				flex-basis: 100%;
+			}
+		}
+	}
+	.offers {
+		min-height: 600px;
+		text-align: center;
+		h1 {
+			font-size: 120%;
+			text-align: center;
+			margin-top: 20px;
+		}
+		p {
+			font-size: 100%;
+			text-align: center;
+			padding: 0;
+		}
+		a.btn {
+			padding: 15px 40px;
+		}
+		.grid li {
+			&.small {
+				flex-basis: 100%;
+			}
+			&.large {
+				flex-basis: 100%;
+				margin-top: 70px;
+			}
+		}
+	}
+	.doubleGrid {
+		flex-basis: 100%;
+	}
+	.contact {
+		margin-top: 850px;
+		form input {
+			flex-basis: 100%;
+			margin: 0 0 20px 0;
+		}
+	}
+	.information {
+		min-height: 600px;
+		text-align: center;
+		h1 {
+			font-size: 120%;
+			text-align: center;
+			margin-top: 20px;
+		}
+		video {
+			padding: 0;
+			height: auto;
+		}
+		p {
+			font-size: 100%;
+			text-align: center;
+			padding: 0;
+		}
+		form input {
+			flex-basis: 100%;
+			margin: 0 0 20px 0;
+		}
+		a.btn {
+			padding: 15px 40px;
+		}
+		.grid li {
+			&.small {
+				flex-basis: 100%;
+			}
+			&.large {
+				flex-basis: 100%;
+			}
+		}
+	}
+	.pair {
+		flex-basis: 100%;
+		justify-content: center;
+	}
+}
+.offers {
+	background-color: $white;
+	h1 {
+		font: bold 30pt $font_1, $font_0;
+		margin-bottom: 15px;
+		color: $color_chicago_approx;
+		text-transform: uppercase;
+	}
+	p {
+		font: normal 12pt $font_1, $font_0;
+		margin-bottom: 60px;
+		padding-right: 65px;
+		color: $color_dove_gray_approx;
+		text-align: left;
+		padding-left: 0;
+	}
+	.grid li {
+		&.large {
+			flex-basis: 50%;
+		}
+		&.small {
+			flex-basis: 50%;
+		}
+	}
+	a.btn {
+		padding: 13px 46px;
+		margin-bottom: 30px;
+		border: 2px solid $red;
+		color: $red;
+		background-color: $white;
+	}
+}
+.doubleGrid {
+	flex-basis: 50%;
+}
+.iconssize {
+	width: 10%;
+	margin-bottom: 20px;
+}
+.square {
+	font-size: 9pt !important;
+	margin-top: 15px;
+}
+.offersLine {
+	height: 2px;
+	width: 100%;
+	background-color: $color_cararra_approx;
+}
+.оur-work {
+	background-color: $white;
+}
+.our-work {
+	.title {
+		text-transform: uppercase;
+	}
+	p {
+		padding-left: 120px;
+		padding-right: 120px;
+	}
+	nav {
+		display: flex;
+		justify-content: space-around;
+		font-size: 12pt;
+		li {
+			margin: 0;
+			padding-bottom: 28px;
+			padding-right: 12px;
+			padding-left: 12px;
+			text-transform: uppercase;
+			font-weight: bold;
+			color: $color_tapa_approx;
+			&:hover {
+				color: $color_red_orange_approx;
+			}
+		}
+	}
+	.grid li {
+		padding: 10px;
+		height: 290px;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 3px;
+		//Instead of the line below you could use @include background-clip($clip)
+		background-clip: content-box;
+		background-size: cover;
+		background-position: center;
+		background-color: $color_quarter_spanish_white_approx;
+		&.eightsquare {
+			flex-basis: 25%;
+		}
+	}
+}
+.activemenu {
+	color: $color_red_orange_approx !important;
+}
+@media(max-width: 1179px) {
+	.our-work .grid li {
+		height: 250px;
+	}
+}
+@media(max-width: 712px) {
+	.our-work nav li {
+		font-size: 9pt;
+	}
+}
+@media(max-width: 552px) {
+	.our-work nav li {
+		font-size: 7pt;
+	}
+}
+@media(max-width: 470px) {
+	.our-work nav li {
+		font-size: 4.8pt;
+	}
+}
+@media(max-width: 386px) {
+	.our-work nav li {
+		font-size: 3.3pt;
+	}
+}
+.features {
+	background-color: $white;
+	align-items: flex-start;
+	padding-top: 0;
+	p {
+		text-align: left;
+		padding-left: 0;
+		padding-right: 360px;
+	}
+	.title {
+		text-transform: uppercase;
+	}
+	.grid li {
+		&.small {
+			padding-right: 70px;
+			height: 390px;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 3px;
+			//Instead of the line below you could use @include background-clip($clip)
+			background-clip: content-box;
+			background-size: cover;
+			background-position: center;
+			background-color: $color_quarter_spanish_white_approx;
+			flex-basis: 30%;
+		}
+		&.large {
+			flex-basis: 70%;
+			height: 370px;
+			h4 {
+				text-transform: uppercase;
+				margin-left: 20px;
+			}
+			p {
+				margin-left: 20px;
+				padding-right: 150px;
+			}
+			.grid li {
+				&.socialnet {
+					display: flex;
+					margin-left: 20px;
+					text-align: left;
+					font-style: italic;
+				}
+				&.smallcubs {
+					height: 200px;
+					margin-top: 10px;
+					padding-left: 15px;
+					//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+					border-radius: 2px;
+					//Instead of the line below you could use @include background-clip($clip)
+					background-clip: content-box;
+					background-size: cover;
+					background-position: center;
+					background-color: $color_quarter_spanish_white_approx;
+					flex-basis: 25%;
+				}
+			}
+		}
+		h4 {
+			color: $color_fuscous_gray_approx;
+			font-size: 20px;
+			margin-bottom: 25px;
+		}
+		p {
+			margin: 0;
+		}
+	}
+}
+#networks {
+	justify-content: flex-start !important;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+.credentials {
+	height: 30px;
+	background-color: $color_tapa_approx;
+	margin-top: 170px;
+	h5 {
+		text-transform: uppercase;
+		color: $white;
+		text-align: center;
+		line-height: 30px;
+	}
+}
+.contact {
+	background-color: $color_quarter_spanish_white_approx;
+	color: $white;
+	margin-bottom: 100px;
+	h3 {
+		color: $white !important;
+	}
+	form {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		max-width: 800px;
+		width: 80%;
+		input {
+			padding: 20px;
+			flex: 1;
+			margin-right: 30px;
+			font-size: 18px;
+			color: $color_fuscous_gray_approx;
+			text-decoration: none;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 7px;
+			outline: none;
+			border: 0;
+		}
+		.btn {
+			padding: 18px 42px;
+			text-transform: uppercase;
+		}
+	}
+}
+.touch {
+	background-color: $white;
+	align-items: flex-start;
+	padding-top: 0;
+	p {
+		text-align: left;
+		padding-left: 0;
+		padding-right: 160px;
+	}
+	.title {
+		text-transform: uppercase;
+	}
+}
+.information {
+	position: relative;
+	justify-content: center;
+	min-height: 100vh;
+	color: $white;
+	text-align: left;
+	margin-top: -230px;
+	.grid {
+		li {
+			&.large {
+				width: 100%;
+				padding-left: 65px;
+				color: $white;
+				padding-top: 115px;
+				padding-right: 10px;
+				background-color: $color_heavy_metal_approx;
+				margin-top: 10px;
+				margin-bottom: 10px;
+				justify-content: flex-start;
+				flex-basis: 40%;
+				h4 {
+					text-transform: uppercase;
+					margin-bottom: 25px;
+				}
+				p {
+					padding: 0;
+					margin-left: 0;
+					margin-right: 0;
+					margin-top: 27px;
+					margin-bottom: 27px;
+					padding-right: 150px;
+					font-size: 13px;
+					text-align: left;
+					color: $color_tapa_approx;
+				}
+			}
+			&.small {
+				flex-basis: 60%;
+			}
+		}
+		.small form {
+			display: flex;
+			flex-wrap: wrap;
+			width: 90%;
+			input {
+				padding-left: 14px;
+				padding-right: 14px;
+				padding-top: 17px;
+				padding-bottom: 17px;
+				margin-bottom: 20px;
+				margin-left: 10px;
+				margin-right: 10px;
+				margin-top: 10px;
+				font-size: 18px;
+				color: $color_fuscous_gray_approx;
+				text-decoration: none;
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 7px;
+				outline: none;
+				border: 0;
+				background: $mercury;
+				width: 100%;
+			}
+			textarea {
+				padding: 20px;
+				margin: 10px;
+				width: 100%;
+				font-size: 18px;
+				color: $color_fuscous_gray_approx;
+				text-decoration: none;
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 7px;
+				outline: none;
+				border: 0;
+				background-color: $mercury;
+				resize: none;
+			}
+			.btn {
+				padding: 18px 42px;
+				margin: 10px;
+				width: 100%;
+				text-transform: uppercase;
+			}
+		}
+	}
+	a.btn {
+		padding: 13px 46px;
+		margin-bottom: 30px;
+	}
+}
+.pair {
+	display: flex;
+	flex-basis: 50%;
+	justify-content: space-around;
+}
+.alone {
+	display: flex;
+	flex-basis: 100%;
+}
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	color: $gray;
+	background-color: $color_mine_shaft_approx;
+	padding-left: 100px;
+	padding-right: 100px;
+	padding-top: 60px;
+	padding-bottom: 0;
+	ul {
+		display: flex;
+		margin-bottom: 25px;
+		font-size: 32px;
+		li {
+			margin: 0 8px;
+			&:first-child {
+				margin-left: 0;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+			i.fa-twitter-square {
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 80px !important;
+			}
+		}
+		&.grid {
+			flex-wrap: nowrap;
+		}
+	}
+	.grid {
+		.leftside {
+			display: flex;
+			flex-basis: 50%;
+			justify-content: flex-start;
+		}
+		.rightside {
+			display: flex;
+			flex-basis: 50%;
+			justify-content: flex-end;
+		}
+	}
+	p {
+		text-transform: uppercase;
+		font-size: 14px;
+		color: $white_60;
+		margin-bottom: 10px;
+		a {
+			color: $white;
+		}
+	}
+}
+.circle-icon {
+	background: $color_cararra_approx;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 40px;
+	vertical-align: middle;
+	width: 40px;
+	height: 40px;
+}
